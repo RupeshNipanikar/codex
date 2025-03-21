@@ -88,7 +88,7 @@ const handleSubmit = async (e) => {
             typeText(messageDiv, botResponse);
         } else {
             throw new Error(await response.text());
-        }
+        } 
     } catch (error) {
         console.error("Fetch Error:", error);
         messageDiv.innerHTML = "Error retrieving response";
