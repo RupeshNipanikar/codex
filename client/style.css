@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #1a1a2e; /* Darker, luxurious tone */
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Chat App Container */
+#app {
+  width: 85vw; 
+  max-width: 1000px;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(18px);
+  border-radius: 18px;
+  padding: 15px;
+  box-shadow: 0 10px 30px rgba(170, 0, 255, 0.4); /* Neon purple glow */
+}
+
+/* Chat Messages */
+#chat_container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(170, 0, 255, 0.6) transparent;
+}
+
+/* Scrollbar Styling */
+#chat_container::-webkit-scrollbar {
+  width: 8px;
+}
+
+#chat_container::-webkit-scrollbar-thumb {
+  background: rgba(170, 0, 255, 0.6);
+  border-radius: 10px;
+}
+
+/* Chat Message Wrapper */
+.wrapper {
+  display: flex;
+  align-items: flex-start;
+  padding: 12px;
+  border-radius: 14px;
+  backdrop-filter: blur(15px);
+}
+
+/* User & AI Message Styling */
+.chat {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  max-width: 95%;
+}
+
+/* Profile Image (Fixed Size) */
+.profile {
+  width: 50px; 
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ff007f, #ff00ff); /* Neon pink */
+  flex-shrink: 0;
+}
+
+.ai .profile {
+  background: linear-gradient(135deg, #7000ff, #aa00ff); /* Royal purple */
+}
+
+.profile img {
+  width: 65%;
+  height: 65%;
+}
+
+/* Message Box */
+.message {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 14px 18px;
+  border-radius: 12px;
+  font-size: 18px;
+  color: #fff;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  max-width: 100%;
+  line-height: 1.5;
+}
+
+/* AI messages */
+.ai .message {
+  background: rgba(170, 0, 255, 0.3);
+}
+
+/* Input Form */
+form {
+  display: flex;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 14px;
+  border-radius: 14px;
+  gap: 12px;
+}
+
+/* Input Box */
+textarea {
+  flex: 1;
+  padding: 14px;
+  font-size: 18px;
+  color: #fff;
+  background: transparent;
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+/* Input Field Focus */
+textarea:focus {
+  border-bottom: 2px solid #ff00ff;
+}
+
+/* Send Button */
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Send Button Hover Effect */
+button:hover {
+  transform: scale(1.1);
+}
+
+/* Button Icon */
+button img {
+  width: 32px;
+  height: 32px;
+  filter: brightness(1.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #app {
+    width: 95vw;
+    height: 95vh;
+  }
+
+  textarea {
+    font-size: 16px;
+  }
+
+  .message {
+    font-size: 16px;
+  }
+}
